@@ -1,0 +1,138 @@
+/* Загальні стилі сторінки */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Картки завдань */
+.card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.card-header {
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #4338ca;
+}
+
+h3 {
+    margin-bottom: 15px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 25px 0;
+}
+
+/* Опис завдань */
+.task-requirments, .task-requests {
+    margin-bottom: 20px;
+}
+
+.formula-box {
+    padding: 15px;
+    margin: 15px 0;
+    text-align: center;
+    background-color: #f5f7fb;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+/* Форми введення */
+.task-inputs form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-inputs label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: bold;
+}
+
+input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4f46e5;
+}
+
+/* Кнопки */
+button {
+    padding: 11px 16px;
+    font-size: 15px;
+    color: white;
+    background-color: #4f46e5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4338ca;
+}
+
+/* Таблиця результатів */
+.results-box {
+    margin-top: 25px;
+    overflow-x: auto;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.result-table th,
+.result-table td {
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.result-table th {
+    background-color: #eef2ff;
+    color: #3730a3;
+}
+
+.result-table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+/* Графік */
+.graphic-container {
+    width: 100%;
+    margin-top: 25px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
