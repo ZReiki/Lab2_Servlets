@@ -12,34 +12,34 @@ public class NumericalSequence {
         this.n = n;
     }
 
-    private double factorial(int n) {
-        if (n <= 1) return 1.0;
-        return n * factorial(n - 1);
-    }
-
-    private double element(int i) {
-        int power = i * 2 + 1;
-        return Math.pow(-1, i) * (Math.pow(x, power) / (factorial(power)));
+    double element(int i){
+        return -(x * x) / ((2 * i) * (2 * i + 1));
     }
 
     public double sumN(){
-        double sum = 0.0;
-        for(int i = 0; i < n; i++){
-            sum += element(i);
+        if(n == 0) return 0;
+
+        double cur = x;
+        double sum = cur;
+
+        for(int i = 1; i < n; i++){
+            cur *= element(i);
+            sum += cur;
         }
         return sum;
     }
 
     public SumResult sumEPS(double EPS){
-        double sum = 0.0;
+        double cur = x;
+        double sum = cur;
         int count = 0;
         int i = 0;
 
         while(true) {
-            double current = element(i);
+            cur *= element(i);
 
-            if(Math.abs(current) > EPS) {
-                sum += current;
+            if(Math.abs(cur) > EPS) {
+                sum += cur;
                 count++;
             } else break;
             i++;
